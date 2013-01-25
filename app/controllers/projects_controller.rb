@@ -1,12 +1,13 @@
 class ProjectsController < ApplicationController
 	def index
+		@projects = Project.all
 		respond_to do |format|
 			format.html
 		end
 	end
 
 	def show
-
+		@project = Project.find_by_id(params[:id])
 	end
 
 	def new
@@ -14,6 +15,10 @@ class ProjectsController < ApplicationController
 	end
 
 	def create
+		@project = Project.new(params[:project])
+		@project.save
+		flash[:notice] = "project has been created"
+		redirect_to @project
 
 	end
 

@@ -7,5 +7,5 @@ Feature: Creating projects
 		Given I am on the homepage
 		When I follow "new project"
 		And I fill in "name" with "TextMate2"
-		And I press "create project"
+		And I press "Create Project"
 		Then I should see "project has been created."
