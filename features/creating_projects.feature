@@ -8,4 +8,4 @@ Feature: Creating projects
 		When I follow "new project"
 		And I fill in "name" with "TextMate2"
 		And I press "Create Project"
-		Then I should see "project has been created."
+		Then I should see "project has been created"
